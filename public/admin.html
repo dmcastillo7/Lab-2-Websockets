@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panel administrativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <h1>Panel administrativo</h1>
+
+        <div class="admin-stats">
+            <div class="admin-stat available-stat">
+                Disponibles
+                <strong id="available">0</strong>
+            </div>
+
+            <div class="admin-stat reserved-stat">
+                Reservados
+                <strong id="reserved">0</strong>
+            </div>
+
+            <div class="admin-stat sold-stat">
+                Vendidos
+                <strong id="sold">0</strong>
+            </div>
+        </div>
+
+        <div class="admin-actions">
+            <button id="releaseAll">Liberar reservas</button>
+            <button id="resetSeats">Resetear asientos</button>
+        </div>
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Asiento</th>
+                    <th>Estado</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody id="seatTable"></tbody>
+        </table>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>
